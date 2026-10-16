@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Flowcarth tugas praktikum(1) - modul 1"/>
+        <attribute name="authors" value="FENNY EKA SAPUTRI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-29 04:35:44 PM"/>
+        <attribute name="created" value="RkVOTlkgRUtBIFNBUFVUUkk7TEFQVE9QLTRWMzJEVEpEOzIwMjYtMDktMjk7MDE6MTM6MzEgUE07MzUzNA=="/>
+        <attribute name="edited" value="RkVOTlkgRUtBIFNBUFVUUkk7TEFQVE9QLTRWMzJEVEpEOzIwMjYtMDktMjk7MDQ6MzU6NDQgUE07MTszNjUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="uang, hargabuku, hargapulpen, hargaflasdisk, totalhargabuku, totalhargapulpen, totalhargaflasdisk, totalbelanjasebelumdiskon, diskon, totalbelanjasetelahdiskon, pajakppn, totalbelanjasetelahpajak, uangkembalianudin" type="Integer" array="False" size=""/>
+            <input variable="uang"/>
+            <input variable="hargabuku"/>
+            <input variable="hargapulpen"/>
+            <input variable="hargaflasdisk"/>
+            <assign variable="totalhargabuku" expression="3*hargabuku"/>
+            <assign variable="totalhargapulpen" expression="2*hargapulpen"/>
+            <assign variable="totalhargaflasdisk" expression="1*hargaflasdisk"/>
+            <assign variable="totalbelanjasebelumdiskon" expression="totalhargabuku+totalhargapulpen+totalhargaflasdisk"/>
+            <assign variable="diskon" expression="totalbelanjasebelumdiskon*(10/100)"/>
+            <assign variable="totalbelanjasetelahdiskon" expression="totalbelanjasebelumdiskon-diskon"/>
+            <assign variable="pajakppn" expression="totalbelanjasetelahdiskon*(11/100)"/>
+            <assign variable="totalbelanjasetelahpajak" expression="totalbelanjasetelahdiskon-pajakppn"/>
+            <assign variable="uangkembalianudin" expression="uang-totalbelanjasetelahpajak"/>
+        </body>
+    </function>
+</flowgorithm>
